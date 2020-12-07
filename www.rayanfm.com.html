@@ -1,0 +1,119 @@
+<!-- saved from url=(0029)http://www.rayanfm.com/radio/ -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link type="text/css" rel="stylesheet" href="./www.rayanfm.com_files/style.css">
+
+  <meta name="description" content="Radio Rayan LIVE from Swaida (As-Suwayda) Syria">
+  <meta name="keywords" content="radio, folk, songs,تراث,">
+  <meta name="author" content="Rayan FM">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./www.rayanfm.com_files/jquery.min.js.download"></script>
+
+
+  <link type="text/css" rel="stylesheet" href="./www.rayanfm.com_files/style(1).css">
+
+  <script type="text/javascript" src="./www.rayanfm.com_files/flashobject.js.download"></script>
+</head>
+
+<body style="margin:0px; background-color: #000000;">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fefefe">
+
+    <tbody>
+      <tr>
+
+        <td>
+          <table width="100%" border="0">
+            <tbody>
+              <tr>
+                <td width="83%"><img src="./www.rayanfm.com_files/ylogo.jpg" alt=""></td>
+                <td width="17%"><a href="http://www.rayanfm.com/" target="_blank"><img src="./www.rayanfm.com_files/sonic.jpg" alt="The Best Shoutcast Control Panel" border="0"></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div align="right"></div>
+          <hr noshade="">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+  <br>
+
+  <table align="center">
+
+    <tbody>
+      <tr>
+
+        <td valign="top"><br>
+
+          <b>
+            <font color="FFFFFF">&nbsp;
+              <audio id="radio" controls="controls" autoplay="autoplay">
+                <source src="https://78.129.150.144/live.mp3?typeportmount=s1_28227_stream_574542785;" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+
+              <br>
+              <div id="refresh"></div>
+              <script>
+                $(document).ready(function() {
+                  // Show loading animation.
+                  //var radio = document.getElementById("radio");
+                  var $radio = $('#radio')
+                  var playPromise = radio.play();
+
+                  if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        // Automatic playback started!
+                        // Show playing UI.
+                      })
+                      .catch(error => {
+                        // Auto-play was prevented
+                        // Show paused UI.
+
+                      });
+                  }
+                  var $refresh = $('#refresh'),
+                    loaded = 1,
+                    data = {
+                      html: "Test",
+                      delay: 3
+                    };
+
+                  var refresh = function() {
+                    $.ajax({
+                      url: "/google_ads.html",
+                      data: data,
+                      type: "GET",
+                      dataType: "html",
+                      success: function(response) {
+                        $refresh.html(response);
+                        loaded++;
+                        setTimeout(refresh, 120000000000);
+                      }
+                    });
+                  };
+
+                  refresh();
+                });
+              </script>
+              <div style="direction:rtl">
+
+              </div>
+
+            </font>
+          </b></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
