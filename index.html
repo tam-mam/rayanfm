@@ -1,130 +1,127 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>Rayan FM Radio
+      </title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortout icon" type="image/x-icon" href="logo.ico" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="home">
+        <nav class="desktop-nav">
+          <div class="logo">
+            <a href="#home">
+              <img src="images/logo.png" alt="" />
+            </a>
+            <div class="menu-btn1" >
+                <img src="images/Rayan-FM-logo.png" alt="" />
+            </div>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="mobile-web-app-capable" content="yes">
-  <link type="text/css" rel="stylesheet" href="./www.rayanfm.com_files/style.css">
+          </div>
 
-  <meta name="description" content="Radio Rayan LIVE from Swaida (As-Suwayda) Syria">
-  <meta name="keywords" content="radio, folk, songs,تراث,">
-  <meta name="author" content="Rayan FM">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./www.rayanfm.com_files/jquery.min.js.download"></script>
+        </nav>
 
+        <nav class="mobile-nav">
+          <div class="logo">
+            <a href="#home">
+              <img src="images/logo.png" alt="" />
+            </a>
+            <div class="menu-btn1" >
+                <img src="images/Rayan-FM-logo.png" alt="" />
+            </div>
 
-  <link type="text/css" rel="stylesheet" href="./www.rayanfm.com_files/style(1).css">
-  <style>
-  iframe {
-  border: 1px solid red;
-}
-      </style>
-  <script type="text/javascript" src="./www.rayanfm.com_files/flashobject.js.download"></script>
-</head>
-
-<body style="margin:0px; background-color: #000000;">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fefefe">
-
-    <tbody>
-      <tr>
-
-        <td>
-          <table width="100%" border="0">
-            <tbody>
-              <tr>
-                <td width="83%"><img src="./www.rayanfm.com_files/ylogo.jpg" alt=""></td>
-                <td width="17%"><a href="http://www.rayanfm.com/" target="_blank"><img src="./www.rayanfm.com_files/sonic.jpg" alt="The Best Shoutcast Control Panel" border="0"></a></td>
-              </tr>
-            </tbody>
-          </table>
-          <div align="right"></div>
-          <hr noshade="">
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </div>
 
 
+        </nav>
 
+        <div class="mobile-menu-container">
+          <div class="menu-btn1" >
+              <img src="images/Rayan-FM-logo.png" alt="" />
+          </div>
+        </div>
 
-
-
-  <br>
-
-  <table align="center">
-
-    <tbody>
-      <tr>
-
-        <td valign="top"><br>
-
-          <b>
-            <font color="FFFFFF">&nbsp;
+        <div class="hero-container">
+          <div class="left">
+            <p class="i-am">
+              We are
+            </p>
+            <h2>
+              Rayan FM,
+            </h2>
+            <h2>
+              Stay Tuned!
               <audio id="radio" controls="controls" autoplay="autoplay">
-                <source src="http://78.129.150.144/live.mp3?typeportmount=s1_28227_stream_574542785;" type="audio/mpeg" crossorigin="anonymous">
-                Your browser does not support the audio element.
-              </audio>
+          <source src="https://freeuk16.listen2myradio.com/live.mp3?typeportmount=s1_28227_stream_826882653" type="audio/mpeg"  >
+          Your browser does not support the audio element.
+            </audio>
+            </h2>
 
-              <br>
-              <div id="refresh"></div>
-                <iframe
-                 id="fr"
-                 name="myFrame"
-                 width="0"
-                 height="0"
-                src="https://rayanfm.radiostream123.com/openfire.ajax.php?radio_id=3231456"
-                allow="sub_navigation"
-                ></iframe>
-              <script>
-                $(document).ready(function() {
-                  // Show loading animation.
-                  //var radio = document.getElementById("radio");
-                  var $radio = $('#radio')
-                  var playPromise = radio.play();
+            <a href="#contact" class="btn">Contact</a>
+            <iframe id="fr" name="myFrame" src="https://rayanfm.radiostream123.com/openfire.ajax.php?radio_id=3231456" allow="sub_navigation" width="0" height="0"></iframe>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/rayanfmstation" target="_blank">
+                <img src="images/facebook-logo.png" alt="" />
+              </a>
+              <a href="https://tunein.com/radio/Rayan-FM-902-s214806/" target="_blank">
+                <img src="images/Tuinin-logo.png" alt="" />
+              </a>
+              <a href="https://www.instagram.com/rayanfm90.2" target="_blank">
+                <img src="images/instagram-logo.png" alt="" />
+              </a>
+              <a href="https://www.youtube.com/channel/UCwrg2ISUKJP0cDwt7OnSXHQ" target="_blank">
+                <img src="images/youtube-logo.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <img src="images/hero-image.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <section id="contact">
 
-                  if (playPromise !== undefined) {
-                    playPromise.then(_ => {
-                        // Automatic playback started!
-                        // Show playing UI.
-                      })
-                      .catch(error => {
-                        // Auto-play was prevented
-                        // Show paused UI.
 
-                      });
-                  }
-                  var $refresh = $('#refresh'),
-                    loaded = 1,
-                    data = {
-                      html: "Test",
-                      delay: 3
-                    };
+        <h2>Contact Us</h2>
 
-                  var refresh = function() {
-                    $.ajax({
-                      url: "/google_ads.html",
-                      data: data,
-                      type: "GET",
-                      dataType: "html",
-                      success: function(response) {
-                        $refresh.html(response);
-                        loaded++;
-                        setTimeout(refresh, 120000000000);
-                      }
-                    });
-                  };
+        <div class="section-content">
+          <div class="pic">
+        <img src="images/Rayan-FM-Logo.png" alt="" />
+          </div>
+          <div class="email">
+            <img src="images/mail-icon.png" alt="" />
+            <div class="contact-text">info@rayanfm.com</div>
+          </div>
 
-                  refresh();
-                });
-              </script>
-              <div style="direction:rtl">
+          <div class="phone">
+            <img src="images/phone-icon.png" alt="" />
+            <div class="contact-text">(963)16236810</div>
+          </div>
 
-              </div>
+          <div class="address">
+            <img src="images/address-logo.png" alt="" />
+            <div class="contact-text">
+              Hani Abu Saleh Building -Tariq bin Ziyad Street, As Suwayda-Syria
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        Welcome
+      </footer>
+    </div>
+  </body>
+  <script>
+  const myframe =document.getElementById("fr");
+    myframe.addEventListener("unload",function (){
+      document.getElementById("fr").crossOrigin = "anonymous";
+      document.getElementById("fr").src="https://rayanfm.radiostream123.com/openfire.ajax.php?radio_id=3231456";
+    });
 
-            </font>
-          </b></td>
-      </tr>
-    </tbody>
-  </table>
-</body>
-
+  </script>
 </html>
