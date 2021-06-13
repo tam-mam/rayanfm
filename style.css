@@ -292,7 +292,7 @@ footer {
     position: absolute;
     width:150px;
     height:53px;
-    right: 0px;
+    right: -20px;
     cursor: pointer;
     margin-top:2px;
   }
