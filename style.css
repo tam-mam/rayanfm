@@ -281,7 +281,22 @@ footer {
 }
 
 /* Media Queries */
+@media (max-width: 380px) {
+  header .mobile-nav .logo .photo{
+    width:70px;
+    height:55px;
+  }
 
+
+  header .mobile-nav .menu-btn1 img{
+    position: absolute;
+    width:150px;
+    height:53px;
+    right: 0px;
+    cursor: pointer;
+    margin-top:2px;
+  }
+}
 @media (max-width: 768px) {
   .wrapper {
     width: auto;
