@@ -14,7 +14,7 @@
     <div class="wrapper">
       <header id="home">
         <nav class="desktop-nav">
-          <div class="logo">
+          <div class="logo" onclick="ref1()">
             <a href="#home">
               <img src="images/logo.png" alt="" class="photo" />
             </a>
@@ -27,7 +27,7 @@
         </nav>
 
         <nav class="mobile-nav">
-          <div class="logo">
+          <div class="logo" onclick="ref1()">
             <a href="#home">
               <img src="images/logo.png" alt="" class="photo"/>
             </a>
@@ -56,7 +56,8 @@
             </h2>
             <h2>
               Stay Tuned!
-              <audio id="radio" controls="controls" autoplay="autoplay">
+			  <p class="status"><a class="button" id="audio-button" onclick="ref()" >Load audio</a> <span id="audio-progress-container"></span></p>
+              <audio id="radio" controls="controls" preload="none">
           <source src="https://freeuk28.listen2myradio.com/live.mp3?typeportmount=s1_17532_stream_726858015" type="audio/mpeg"  >
           Your browser does not support the audio element.
             </audio>
@@ -124,6 +125,47 @@
     </div>
   </body>
   <script>
+    function audioLoad() {
+      console.log('Audio loading');
+
+      document.getElementById('audio-progress-container').innerHTML = 'Buffering: <progress id="audio-progress" value="0" max="100">0%</progress>';
+      document.getElementById('audio-button').style.display = 'none'; // no longer needed
+
+          audioBuffer.load();
+
+
+    }
+
+    function audioProgress(percentBuffered) {
+      console.log('Audio progress: ' + percentBuffered + '%');
+      document.getElementById('audio-progress').setAttribute('value', percentBuffered);
+      document.getElementById('audio-progress').innerHTML = percentBuffered + '%';
+    }
+
+    function audioReady() {
+      console.log('Audio ready!');
+
+      document.getElementById('audio-progress').setAttribute('value', 100);
+      document.getElementById('audio-progress').innerHTML = '100%';
+
+
+
+
+document.getElementById("radio").play;
+
+
+    }
+    function ref1(){
+location.reload();
+    }
+    function ref(){
+document.getElementById("radio").load();
+    }
+	  var audioBuffer = new Mediabuffer(document.getElementById('radio'), audioProgress, audioReady);
+  			document.getElementById('audio-button').addEventListener('click', audioLoad, true);
+        document.getElementById('audio-button').addEventListener('click', audioReady, true);
+  			document.getElementById('audio-button').style.display = 'inline-block';
+
   const myframe =document.getElementById("fr");
     myframe.addEventListener("unload",function (){
       document.getElementById("fr").crossOrigin = "anonymous";
